@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  db-inventario:
+    image: postgres:16-alpine
+    container_name: postgres_inventario
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD="Tu_contraseña"
+      - POSTGRES_DB=InventarioDB
+      - TZ=UTC
+    ports:
+      - "5435:5432"
+    volumes:
+      - ./data-db:/var/lib/postgresql/data
