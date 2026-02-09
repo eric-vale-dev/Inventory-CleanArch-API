@@ -12,23 +12,18 @@ Backend desarrollado con .NET 8 siguiendo los principios de Clean Architecture. 
 
 ## 🛠️ Cómo ejecutar el proyecto
 
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone [https://github.com/TU_USUARIO/InventarioCleanArch.git](https://github.com/TU_USUARIO/InventarioCleanArch.git)
-    ```
-
-2.  **Levantar la Base de Datos (Docker):**
+1.  **Levantar la Base de Datos (Docker):**
     Asegúrate de tener Docker corriendo.
     ```bash
     docker compose up -d
     ```
 
-3.  **Ejecutar las migraciones (Crear tablas):**
+2.  **Ejecutar las migraciones (Crear tablas):**
     ```bash
     dotnet ef database update --project Inventario.Infrastructure --startup-project Inventario.API
     ```
 
-4.  **Correr la API:**
+3.  **Correr la API:**
     ```bash
     dotnet run --project Inventario.API/Inventario.API.csproj
     ```
